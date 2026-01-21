@@ -1,4 +1,5 @@
 import { DatabaseService, PriceService, VehicleService, PersonnelService } from './database.service';
+import { supabase } from '../config';
 
 // 结算数据接口
 export interface DailySettlementData {

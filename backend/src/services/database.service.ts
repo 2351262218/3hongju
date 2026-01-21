@@ -1,5 +1,6 @@
 import { supabase, supabaseAdmin } from '../config';
 import { v4 as uuidv4 } from 'uuid';
+import { supabase } from '../config';
 
 // 通用查询选项
 export interface QueryOptions {
@@ -80,7 +81,7 @@ export class DatabaseService {
       throw error;
     }
 
-    return data;
+    return data as T | null;
   }
 
   /**
@@ -119,7 +120,7 @@ export class DatabaseService {
       throw error;
     }
 
-    return data || [];
+    return (data as T[]) || [];
   }
 
   /**
