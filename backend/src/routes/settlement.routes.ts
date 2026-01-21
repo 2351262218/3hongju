@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import { DatabaseService, VehicleService } from '../services/database.service';
 import { CalculationService } from '../services/calculation.service';
 import { ScheduledTaskService } from '../jobs/scheduled-tasks';
+import { supabase } from '../config';
 import Joi from 'joi';
 
 const router = Router();

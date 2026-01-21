@@ -1,5 +1,6 @@
 import { Router, Request, Response } from 'express';
 import { DatabaseService, PriceService } from '../services/database.service';
+import { supabase } from '../config';
 import Joi from 'joi';
 
 const router = Router();
